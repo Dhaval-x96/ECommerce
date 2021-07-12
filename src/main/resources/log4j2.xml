@@ -19,7 +19,7 @@
 
 	<Appenders>
 		<RollingFile name="rollingFileLog"
-			fileName="${log-path}/gs_market_interface-isone.log"
+			fileName="${APP_LOG_ROOT}/gs_market_interface-isone.log"
 			filePattern="${log-path}/pmt-%d{yyyy-MM-dd}.log">
 			<PatternLayout>
 				<Pattern>%-7d{yyyy-MM-dd-HH:mm:ss:SSS} [%-5p] [%C] [%X{requestId}]
@@ -41,7 +41,7 @@
 	<Loggers>
 		<!-- LOG everything at INFO level -->
 		<Logger name="com.ecommerce" additivity="false">
-		<!-- 	<AppenderRef ref="RollingFile" /> -->
+		 	<AppenderRef ref="RollingFile" />
 			<AppenderRef ref="console" />
 		</Logger>
 		<Root level="info">
