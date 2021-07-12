@@ -75,7 +75,7 @@ public class ElectronicsController {
 
 	@GetMapping
 	public ResponseEntity<ApiResponse<Page<Electronics>>> getAll(@RequestParam(value = "rating", required = false) Short rating,@RequestParam(value = "discountedPrice", required = false) String discountedPrice,Pageable pageable, HttpServletRequest request){
- d		return ResponseEntity.ok().body(new ApiResponse<Page<Electronics>>(this.electronicsService.getAll(pageable, rating, discountedPrice), request.getRequestURL().toString()));
+		return ResponseEntity.ok().body(new ApiResponse<Page<Electronics>>(this.electronicsService.getAll(pageable, rating, discountedPrice), request.getRequestURL().toString()));
 	}
 
 	@Component
